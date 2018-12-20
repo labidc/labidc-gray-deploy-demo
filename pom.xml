@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>labidc-gray-deploy-demo</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>labidc-gray-deploy-demo</name>
+    <description>服务器演示</description>
+
+    <modules>
+        <module>base-service</module>
+        <module>business-service</module>
+        <module>product-service</module>
+        <module>gateway-service</module>
+        <module>eureka-server</module>
+        <module>zuul2-server</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <!--系统配置-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <!--插件-->
+        <docker.image.prefix>labidc</docker.image.prefix>
+        <dockerfile-maven-plugin.version>1.4.4</dockerfile-maven-plugin.version>
+
+        <!--第三方库版本号-->
+        <lombok.version>1.16.18</lombok.version>
+        <alibaba.fastjson.version>1.2.47</alibaba.fastjson.version>
+        <aliyun.sdk.core.version>2.2.0</aliyun.sdk.core.version>
+        <hibernate.validator>6.0.9.Final</hibernate.validator>
+        <xstream.version>1.4.10</xstream.version>
+        <druid.version>1.1.10</druid.version>
+        <mybatis.spring.version>1.3.2</mybatis.spring.version>
+        <alibaba.fastjson.version>1.2.47</alibaba.fastjson.version>
+        <swagger2.version>2.9.0</swagger2.version>
+        <flyway-core.version>5.1.1</flyway-core.version>
+        <pagehelper-spring-boot-starter.version>1.2.5</pagehelper-spring-boot-starter.version>
+        <pagehelper.version>5.1.4</pagehelper.version>
+        <commons-io.version>2.6</commons-io.version>
+        <guava.version>27.0-jre</guava.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-collections4.version>4.2</commons-collections4.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--基于spring-cloud的Finchley.SR1 版本非Finchley.RELEASE版本-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <!--小辣椒工具-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <!--阿里云开发sdk核心包-->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.sdk.core.version}</version>
+            </dependency>
+
+            <!--xml转换工具-->
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${xstream.version}</version>
+            </dependency>
+
+            <!--阿里巴巴json处理包-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba.fastjson.version}</version>
+            </dependency>
+
+            <!-- 使用数据源 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.version}</version>
+            </dependency>
+
+
+            <!-- mybatis 分页包，因为工具项目与基础项目有引用，为了避免冲突，统一版本-->
+            <!--分页插件包含了mybatis-spring-boot-starter 1.3.2-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+            <!--feign服务调用包
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>-->
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun Nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+
+        <!--<repository>
+            <id>aliyunnexus</id>
+            <name>Releases</name>
+            <url>http://47.104.227.249:8681/repository/maven-releases/</url>
+        </repository>-->
+    </repositories>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin><!--git-commit-id-plugin 生成 info git信息-->
+                    <groupId>pl.project13.maven</groupId>
+                    <artifactId>git-commit-id-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>revision</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId><!--该插件建议别翻墙-->
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>${dockerfile-maven-plugin.version}</version>
+                    <configuration>
+                        <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                        <tag>${project.version}</tag>
+                        <buildArgs><!--jar包默认名称-->
+                            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                        </buildArgs>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <phase>install</phase><!--绑定maven生命周期的某个阶段-->
+                            <goals>
+                                <goal>build</goal><!--执行的命令-->
+                                <!--<goal>push</goal>-->
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>

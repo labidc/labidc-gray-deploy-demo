@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>business-service</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <name>business-service</name>
+    <description>业务逻辑层</description>
+
+    <modules>
+        <module>business-service-demo2</module>
+    </modules>
+
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>servicedemo</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <dependencies>
+        <!--小辣椒工具-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

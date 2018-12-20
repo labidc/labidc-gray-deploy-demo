@@ -1,0 +1,15 @@
+# demo配置服务名
+server:
+  port: ${port:10010}
+
+gray:
+  #title: 基础层服务正式版本
+  title: 基础层服务灰度版本
+
+spring:
+  profiles:
+    active: eureka
+  application:
+    name: ${app_name:base-service-demo1}
+
+

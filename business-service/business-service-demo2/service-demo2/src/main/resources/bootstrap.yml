@@ -1,0 +1,28 @@
+# demo配置服务名
+demo1:
+  service:
+    serviceName: BASE-SERVICE-DEMO1
+
+server:
+  port: ${port:10001}
+
+endpoints:
+  restart:
+    enabled: true
+
+spring:
+  gray:
+    deploy:
+      ribbonRule: BestAvailableGrayDeployRule
+  profiles:
+    active: eureka
+  application:
+    name: ${app_name:business-service-demo2}
+
+gray:
+  title: 业务层服务正式版本
+  #title: 业务层服务灰度版本
+
+
+
+

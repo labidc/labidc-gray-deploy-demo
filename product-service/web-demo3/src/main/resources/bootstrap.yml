@@ -1,0 +1,24 @@
+# demo2配置服务名
+demo2:
+  service:
+    serviceName: BUSINESS-SERVICE-DEMO2
+
+server:
+  port: ${port:10017}
+
+spring:
+  gray:
+    deploy:
+      ribbonRule: RandomGrayDeployRule
+  profiles:
+    active: eureka
+  application:
+    name: ${app_name:product-service-demo3}
+
+gray:
+  title: 产品层服务正式版本
+  #title: 产品层服务灰度版本
+
+
+
+

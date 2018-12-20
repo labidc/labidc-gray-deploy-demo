@@ -1,0 +1,69 @@
+server:
+  port: ${port:10003}
+
+spring:
+  application:
+    name: ${app_name:service-geteway}
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 15s
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        tags:
+          - 网关路由
+        instance-group: 工具
+        management-tags: 网关路由
+        query-passing: true
+        prefer-ip-address: true
+      config:
+        enabled: true   # 默认是true --
+        format: YAML # 表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES
+        data-key: configuration # config/service-web-microservice,dev/configuration, config/服务名称,环境/键
+        fail-fast: true
+        watch:
+          enabled: false
+    # 可以做分流和限流操作，自行百度
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          #route-id-prefix: test_
+          #include-expression: metadata['edge'] != ''
+          #lower-case-service-id: true
+      routes:
+      - id: gray_demo
+        # 新版本请求会走这里，带version请求的，全是走灰度的
+        uri: lb://product-service-demo3-gray
+        predicates:
+        - Path=/test_service/**
+        - Header=version, (.*?)
+        filters:
+          - StripPrefix=1
+          - name: Hystrix
+            args:
+              name: fallbackcmd
+              fallbackUri: forward:/fallback
+      - id: prod_demo
+        # 正式版本，没有version请求头的，全是正常请求
+        uri: lb://product-service-demo3
+        predicates:
+        - Path=/test_service/**
+        filters:
+          - StripPrefix=1
+          - name: Hystrix
+            args:
+              name: fallbackcmd
+              fallbackUri: forward:/fallback
+
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+

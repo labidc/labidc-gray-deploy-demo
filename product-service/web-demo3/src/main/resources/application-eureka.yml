@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      version: 1.0.0
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+    healthcheck:
+      enabled: true
