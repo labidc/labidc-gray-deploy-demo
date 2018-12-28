@@ -1,9 +1,7 @@
 package com.example.demo.base.demo1.contract.feign;
 
-import com.example.demo.base.demo1.contract.model.TestDemoModel;
 import com.example.demo.base.demo1.contract.service.TestService;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Component;
 
 /**
  * @program: service1

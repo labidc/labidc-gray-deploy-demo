@@ -29,25 +29,26 @@
         <!--eureka注册服务中心, 需要注册，否则默认zuul拉去不到注册的服务-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.labidc</groupId>
-            <artifactId>labidc-gray-deploy-eureka</artifactId>
-            <version>1.0.1</version>
-        </dependency>
 
-    </dependencies>
+         <dependency>
+             <groupId>com.labidc</groupId>
+             <artifactId>labidc-gray-deploy-eureka</artifactId>
+             <version>1.0.1</version>
+         </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+     </dependencies>
+
+     <build>
+         <plugins>
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+             </plugin>
+         </plugins>
+     </build>
 
 
-</project>
+ </project>

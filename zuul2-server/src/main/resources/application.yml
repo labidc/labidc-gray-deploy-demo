@@ -7,6 +7,16 @@ spring:
       ribbonRule: RandomGrayDeployRule
   application:
     name: zuul-server
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    sender:
+      type: web
+    base-url: http://127.0.0.1:9411/
+    enabled: true
+
 
 # 路由规则配置
 zuul:
@@ -22,18 +32,12 @@ zuul:
       serviceId: product-service-demo3
 
 
-
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
-
 eureka:
   instance:
     prefer-ip-address: true
   client:
     registerWithEureka: true
+    registry-fetch-interval-seconds: 30
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
-    healthcheck:
-      enabled: true

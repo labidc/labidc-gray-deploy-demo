@@ -36,10 +36,10 @@
         </dependency>-->
 
         <!--eureka注册服务中心-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--健康指标包，健康监控）配置和使用-->
         <dependency>
@@ -66,22 +66,36 @@
         </dependency>
 
 
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>true</scope>
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>-->
-    </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <!-- <configuration>
-                     <fork>true</fork>
-                 </configuration>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
+
+        <!--eureka 灰度发布包-->
+        <!-- <dependency>
+             <groupId>com.labidc</groupId>
+             <artifactId>labidc-gray-deploy-eureka</artifactId>
+             <version>1.0.1</version>
+         </dependency>-->
+
+
+
+     </dependencies>
+
+     <build>
+         <plugins>
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <!-- <configuration>
+                      <fork>true</fork>
+                  </configuration>-->
             </plugin>
             <plugin>
                 <groupId>pl.project13.maven</groupId>

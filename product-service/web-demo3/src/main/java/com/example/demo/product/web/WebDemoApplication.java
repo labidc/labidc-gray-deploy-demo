@@ -3,7 +3,7 @@ package com.example.demo.product.web;
 import com.example.demo.business.demo2.contract.EnableDemo2Util;
 
 
-import com.labidc.gray.deploy.eureka.EnableGrayDeploy;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 

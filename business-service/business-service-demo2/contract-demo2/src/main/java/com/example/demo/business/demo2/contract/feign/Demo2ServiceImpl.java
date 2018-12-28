@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
  * @author: ChenXingLiang
  * @date: 2018-11-05 14:53
  **/
-@FeignClient(name = "${demo2.service.serviceName}")
+@FeignClient(name = "${demo2.service.serviceName}" )
 public interface Demo2ServiceImpl extends Demo2Service {
 }

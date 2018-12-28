@@ -11,6 +11,7 @@
 
     <modules>
         <module>base-service-demo1</module>
+        <module>base-service-demo4</module>
     </modules>
 
     <parent>

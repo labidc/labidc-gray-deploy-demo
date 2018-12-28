@@ -1,0 +1,39 @@
+# demo配置服务名
+server:
+  port: ${port:10032}
+
+gray:
+  #title: 基础层4服务正式版本
+  title: 基础层4服务灰度版本
+
+spring:
+  profiles:
+    active: eureka
+  application:
+    name: ${app_name:base-service-demo4}
+  sleuth:
+    sampler:
+      probability: 1.0
+    hystrix:
+      strategy:
+        enabled: false
+  zipkin:
+    sender:
+      type: web
+    base-url: http://127.0.0.1:9411/
+    enabled: true
+    discovery-client-enabled: false
+
+
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+
+logging:
+  level:
+   org.springframework.web.servlet.DispatcherServlet: DEBUG
+
+
+
