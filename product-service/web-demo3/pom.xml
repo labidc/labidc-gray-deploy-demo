@@ -58,7 +58,7 @@
         <!--<dependency>
             <groupId>com.labidc</groupId>
             <artifactId>labidc-gray-deploy-consul</artifactId>
-            <version>1.0.30</version>
+            <version>1.0.3</version>
         </dependency>-->
 
         <!--包括了bus总线, 配置中心, 服务发现，该包依赖了consul-api开源包-->
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>com.labidc</groupId>
             <artifactId>labidc-gray-deploy-eureka</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.3</version>
         </dependency>
 
 
