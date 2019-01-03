@@ -51,6 +51,12 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
+        <!--gateway consul 灰度发布包-->
+       <dependency>
+            <groupId>com.labidc</groupId>
+            <artifactId>labidc-gray-deploy-gateway</artifactId>
+            <version>1.0.4</version>
+        </dependency>
 
     </dependencies>
 

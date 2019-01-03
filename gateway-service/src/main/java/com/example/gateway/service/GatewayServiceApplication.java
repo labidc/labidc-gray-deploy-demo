@@ -36,7 +36,6 @@ public class GatewayServiceApplication {
 
     /**
      * 全局熔断器
-     *
      * @return
      */
     @RequestMapping(value = "/fallback")

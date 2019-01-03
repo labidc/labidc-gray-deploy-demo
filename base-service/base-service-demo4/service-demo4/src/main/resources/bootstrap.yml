@@ -3,8 +3,8 @@ server:
   port: ${port:10032}
 
 gray:
-  #title: 基础层4服务正式版本
-  title: 基础层4服务灰度版本
+  title: 基础层4服务正式版本
+  #title: 基础层4服务灰度版本
 
 spring:
   profiles:

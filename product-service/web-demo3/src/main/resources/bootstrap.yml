@@ -4,7 +4,7 @@ demo2:
     serviceName: BUSINESS-SERVICE-DEMO2
 
 server:
-  port: ${port:10017}
+  port: ${port:10018}
 
 spring:
   gray:
@@ -38,8 +38,11 @@ rabbitmq:
 
 
 gray:
-  title: 产品层服务正式版本
-  #title: 产品层服务灰度版本
+  #title: 产品层服务正式版本
+  title: 产品层服务灰度版本
+
+
+
 
 
 

@@ -1,8 +1,8 @@
 eureka:
   instance:
     prefer-ip-address: true
-    metadata-map:
-      version: 1.0.0
+    #metadata-map:
+      #version: 1.0.0
   client:
     registerWithEureka: true
     registry-fetch-interval-seconds: 30

@@ -2,7 +2,9 @@ package com.example.demo.business.demo2.contract.hystrix;
 
 import com.example.demo.business.demo2.contract.feign.Demo2ServiceImpl;
 import com.example.demo.business.demo2.contract.model.Demo2Model;
+import com.example.demo.business.demo2.contract.service.Demo2Service;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.constraints.NotNull;
 
@@ -15,9 +17,8 @@ import javax.validation.constraints.NotNull;
 @Component
 public class Demo2ServiceHystrix implements Demo2ServiceImpl {
 
-
     @Override
-    public String validate(@NotNull Demo2Model model) {
+    public String validate(@RequestBody Demo2Model model) {
         return "出现错误";
     }
 }

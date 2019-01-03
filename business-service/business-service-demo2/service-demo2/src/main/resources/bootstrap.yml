@@ -8,7 +8,7 @@ demo4:
     serviceName: BASE-SERVICE-DEMO4
 
 server:
-  port: ${port:10001}
+  port: ${port:10012}
 
 endpoints:
   restart:
@@ -40,11 +40,16 @@ spring:
 
 
 gray:
-  title: 业务层服务正式版本
-  #title: 业务层服务灰度版本
+  #title: 业务层服务正式版本
+  title: 业务层服务灰度版本
 logging:
   level:
    org.springframework.web.servlet.DispatcherServlet: DEBUG
+
+
+
+
+
 
 # bootstrap 默认加载完成之后会去加载application，再去根据spring.profiles.active 去加载指定配置文件
 # 可以org.springframework.boot.env.EnvironmentPostProcessor=\

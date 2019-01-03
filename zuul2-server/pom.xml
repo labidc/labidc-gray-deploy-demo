@@ -26,18 +26,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!--eureka注册服务中心, 需要注册，否则默认zuul拉去不到注册的服务-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-
-
-         <dependency>
              <groupId>com.labidc</groupId>
              <artifactId>labidc-gray-deploy-eureka</artifactId>
-             <version>1.0.3</version>
-         </dependency>
+             <version>1.0.4</version>
+        </dependency>
 
      </dependencies>
 

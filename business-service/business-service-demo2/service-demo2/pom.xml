@@ -61,12 +61,12 @@
             <artifactId>contract-demo1</artifactId>
         </dependency>
 
-        <!--consul 灰度发布包-->
-        <!--<dependency>
-            <groupId>com.labidc</groupId>
-            <artifactId>labidc-gray-deploy-consul</artifactId>
-            <version>1.0.3</version>
-        </dependency>-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>contract-demo4</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
 
         <!--consul 包括了bus总线, 配置中心, 服务发现，该包依赖了consul-api开源包-->
@@ -81,22 +81,21 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
-       <!--eureka 灰度发布包-->
+         <!--eureka 灰度发布包-->
         <dependency>
-             <groupId>com.labidc</groupId>
-             <artifactId>labidc-gray-deploy-eureka</artifactId>
-             <version>1.0.3</version>
-         </dependency>
+            <groupId>com.labidc</groupId>
+            <artifactId>labidc-gray-deploy-eureka</artifactId>
+            <version>1.0.4</version>
+        </dependency>
 
+        <!--consul 灰度发布包-->
+        <!--<dependency>
+            <groupId>com.labidc</groupId>
+            <artifactId>labidc-gray-deploy-consul</artifactId>
+            <version>1.0.4</version>
+        </dependency>-->
 
-         <dependency>
-             <groupId>com.example</groupId>
-             <artifactId>contract-demo4</artifactId>
-             <version>1.0-SNAPSHOT</version>
-             <scope>compile</scope>
-         </dependency>
-
-     </dependencies>
+    </dependencies>
 
      <build>
          <plugins>

@@ -5,6 +5,7 @@ import com.example.demo.base.demo1.contract.model.TestDemoModel;
 import com.example.demo.base.demo1.contract.service.TestService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
