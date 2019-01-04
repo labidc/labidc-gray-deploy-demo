@@ -15,9 +15,7 @@
         <module>base-service</module>
         <module>business-service</module>
         <module>product-service</module>
-        <module>gateway-service</module>
-        <module>eureka-server</module>
-        <module>zuul2-server</module>
+        <module>spring-server</module>
     </modules>
 
     <parent>
@@ -195,11 +193,50 @@
                 <version>${labidc-gray-deploy.version}</version>
             </dependency>
 
+
+            <!-- -->
             <dependency>
                 <groupId>com.labidc.demo</groupId>
                 <artifactId>product-demo-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>business-demo-contract</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>business-demo-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>base-demo1-contract</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>base-demo1-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>base-demo4-contract</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>base-demo4-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

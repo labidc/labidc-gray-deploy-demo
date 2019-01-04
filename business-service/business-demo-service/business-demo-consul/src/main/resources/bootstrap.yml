@@ -1,0 +1,11 @@
+server:
+  port: ${port:10012}
+
+
+spring:
+  profiles:
+    active: consul
+
+
+
+

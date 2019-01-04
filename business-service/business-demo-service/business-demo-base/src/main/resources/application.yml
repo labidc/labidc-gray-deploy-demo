@@ -1,0 +1,57 @@
+# demo配置服务名
+demo1:
+  service:
+    serviceName: BASE-DEMO1-SERVICE
+
+demo4:
+  service:
+    serviceName: BASE-DEMO4-SERVICE
+
+
+endpoints:
+  restart:
+    enabled: true
+
+
+spring:
+  #gray:
+    #deploy:
+      #ribbonRule: BestAvailableGrayDeployRule
+  application:
+    name: business-demo-service
+  sleuth:
+     enabled: true
+     sampler:
+       probability: 1.0
+  zipkin:
+    sender:
+      type: web
+    base-url: http://127.0.0.1:9411/
+    enabled: true
+    discovery-client-enabled: false
+    #调用链自定义服务名称
+    #service:
+    #  name: woaini
+
+
+
+gray:
+  #title: 业务层服务正式版本
+  title: 业务层服务灰度版本
+logging:
+  level:
+   org.springframework.web.servlet.DispatcherServlet: DEBUG
+
+
+
+
+
+
+# bootstrap 默认加载完成之后会去加载application，再去根据spring.profiles.active 去加载指定配置文件
+# 可以org.springframework.boot.env.EnvironmentPostProcessor=\
+# org.springframework.cloud.sleuth.autoconfig.TraceEnvironmentPostProcessor 动态去写入自己的配置文件
+# 也可以使用 applicationContext.getEnvironment() 根据spring.profiles.active 去读取对应的配置文件
+
+
+
+

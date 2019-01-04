@@ -1,0 +1,13 @@
+server:
+  port: ${port:10023}
+
+spring:
+  profiles:
+    active: eureka
+
+
+
+
+
+
+

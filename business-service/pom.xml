@@ -8,7 +8,8 @@
     <description>业务逻辑层</description>
 
     <modules>
-        <module>business-service-demo2</module>
+        <module>business-demo-contract</module>
+        <module>business-demo-service</module>
     </modules>
 
     <parent>

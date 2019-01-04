@@ -8,8 +8,10 @@
     <description>基础层</description>
 
     <modules>
-        <module>base-service-demo1</module>
-        <module>base-service-demo4</module>
+        <module>base-demo1-contract</module>
+        <module>base-demo1-service</module>
+        <module>base-demo4-contract</module>
+        <module>base-demo4-service</module>
     </modules>
 
     <parent>
