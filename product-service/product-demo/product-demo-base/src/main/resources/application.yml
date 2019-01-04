@@ -4,6 +4,9 @@ demo2:
     serviceName: business-demo-service
 
 
+server:
+  port: ${port:11000}
+
 spring:
   gray:
     deploy:

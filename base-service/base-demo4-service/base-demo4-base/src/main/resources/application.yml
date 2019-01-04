@@ -4,6 +4,9 @@ gray:
   title: 基础层4服务正式版本
   #title: 基础层4服务灰度版本
 
+server:
+  port: ${port:32000}
+
 spring:
   application:
     name: base-demo4-service

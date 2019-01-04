@@ -12,6 +12,8 @@ endpoints:
   restart:
     enabled: true
 
+server:
+  port: ${port:21000}
 
 spring:
   #gray:

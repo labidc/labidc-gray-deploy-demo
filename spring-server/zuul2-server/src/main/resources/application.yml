@@ -1,5 +1,5 @@
 server:
-  port: ${port:20000}
+  port: ${port:8746}
 
 spring:
   gray:

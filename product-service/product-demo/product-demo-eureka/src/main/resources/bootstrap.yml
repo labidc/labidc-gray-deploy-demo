@@ -1,6 +1,3 @@
-server:
-  port: ${port:10018}
-
 spring:
   profiles:
     active: eureka
