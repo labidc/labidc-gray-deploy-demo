@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.example.demo.base.demo4.contract.Demo4AutoConfiguration

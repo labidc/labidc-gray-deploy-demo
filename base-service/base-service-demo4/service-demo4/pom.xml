@@ -75,19 +75,21 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
-        <!--consul 灰度发布包
+        <!--consul 灰度发布包-->
        <dependency>
            <groupId>com.labidc</groupId>
            <artifactId>labidc-gray-deploy-consul</artifactId>
            <version>1.0.4</version>
-       </dependency>-->
+       </dependency>
 
-        <!--eureka 灰度发布包-->
+        <!--eureka 灰度发布包
         <dependency>
             <groupId>com.labidc</groupId>
             <artifactId>labidc-gray-deploy-eureka</artifactId>
             <version>1.0.4</version>
-        </dependency>
+        </dependency>-->
+
+
     </dependencies>
 
     <build>

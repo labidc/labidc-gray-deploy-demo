@@ -20,7 +20,7 @@ spring:
     #deploy:
       #ribbonRule: BestAvailableGrayDeployRule
   profiles:
-    active: eureka
+    active: consul
   application:
     name: ${app_name:business-service-demo2}
   sleuth:

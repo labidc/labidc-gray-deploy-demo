@@ -11,7 +11,7 @@ spring:
     deploy:
       ribbonRule: RandomGrayDeployRule
   profiles:
-    active: eureka
+    active: consul
   application:
     name: ${app_name:product-service-demo3}
   sleuth:
