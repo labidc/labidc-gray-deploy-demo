@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <version>1.0-SNAPSHOT</version>
-    <groupId>com.example</groupId>
+    <groupId>com.labidc.demo</groupId>
     <artifactId>base-service-demo1</artifactId>
     <packaging>pom</packaging>
     <modules>
@@ -13,7 +13,7 @@
     </modules>
 
     <parent>
-        <groupId>com.example</groupId>
+        <groupId>com.labidc.demo</groupId>
         <artifactId>base-service</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
@@ -25,13 +25,13 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.example</groupId>
+                <groupId>com.labidc.demo</groupId>
                 <artifactId>contract-demo1</artifactId>
                 <version>${demo1.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.example</groupId>
+                <groupId>com.labidc.demo</groupId>
                 <artifactId>service-demo1</artifactId>
                 <version>${demo1.version}</version>
             </dependency>

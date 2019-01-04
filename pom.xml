@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
+    <groupId>com.labidc.demo</groupId>
     <artifactId>servicedemo</artifactId>
-    <version>1.0.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>servicedemo</name>
@@ -64,7 +64,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.RELEASE</version>
+                <version>Finchley.SR2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -194,6 +194,12 @@
                 <artifactId>labidc-gray-deploy-gateway</artifactId>
                 <version>${labidc-gray-deploy.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.labidc.demo</groupId>
+                <artifactId>product-demo-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -228,28 +234,6 @@
                     <configuration>
                         <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>com.spotify</groupId><!--该插件建议别翻墙-->
-                    <artifactId>dockerfile-maven-plugin</artifactId>
-                    <version>${dockerfile-maven-plugin.version}</version>
-                    <configuration>
-                        <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                        <tag>${project.version}</tag>
-                        <buildArgs><!--jar包默认名称-->
-                            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                        </buildArgs>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>default</id>
-                            <phase>install</phase><!--绑定maven生命周期的某个阶段-->
-                            <goals>
-                                <goal>build</goal><!--执行的命令-->
-                                <!--<goal>push</goal>-->
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>

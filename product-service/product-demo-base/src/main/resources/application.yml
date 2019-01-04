@@ -1,0 +1,45 @@
+# demo2配置服务名
+demo2:
+  service:
+    serviceName: BUSINESS-SERVICE-DEMO2
+
+
+spring:
+  gray:
+    deploy:
+      ribbonRule: RANDOM
+  application:
+    name: product-service-demo
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    sender:
+      type: web
+    base-url: http://127.0.0.1:9411/
+    enabled: true
+    discovery-client-enabled: false
+
+#feign:
+#  hystrix:
+#    enabled: true
+
+
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+
+
+gray:
+  #title: 产品层服务正式版本
+  title: 产品层服务灰度版本
+
+
+
+
+
+
+

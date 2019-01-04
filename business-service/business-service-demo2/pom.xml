@@ -3,19 +3,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <version>1.0-SNAPSHOT</version>
-    <groupId>com.example</groupId>
     <artifactId>business-service-demo2</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>contract-demo2</module>
-        <module>service-demo2</module>
+        <module>service-demo-base</module>
     </modules>
 
     <parent>
-        <groupId>com.example</groupId>
+        <groupId>com.labidc.demo</groupId>
         <artifactId>business-service</artifactId>
-        <version>1.0.0</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <properties>
@@ -26,19 +24,19 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.example</groupId>
+                <groupId>com.labidc.demo</groupId>
                 <artifactId>contract-demo2</artifactId>
                 <version>${demo2.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.example</groupId>
+                <groupId>com.labidc.demo</groupId>
                 <artifactId>service-demo2</artifactId>
                 <version>${demo2.version}</version>
             </dependency>
             <!--依赖的基础层服务contract-->
             <dependency>
-                <groupId>com.example</groupId>
+                <groupId>com.labidc.demo</groupId>
                 <artifactId>contract-demo1</artifactId>
                 <version>${demo1.version}</version>
             </dependency>
