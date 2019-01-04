@@ -41,4 +41,4 @@ eureka:
     registry-fetch-interval-seconds: 30
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:8766/eureka/
