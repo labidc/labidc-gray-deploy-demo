@@ -1,0 +1,44 @@
+server:
+  port: ${port:8746}
+
+spring:
+  gray:
+    deploy:
+      ribbonRule: RANDOM
+  application:
+    name: zuul-server
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    sender:
+      type: web
+    base-url: http://127.0.0.1:9411/
+    enabled: true
+
+
+# 路由规则配置
+zuul:
+  #忽略所有默认服务配置
+  ignored-services: "*"
+  routes:
+    product-provider:
+      # 这个设置非常关键，要手动设置敏感的请求header, 否则所有请求头都会被过滤，这样设置
+      # 主要是为了放行version请求头
+      sensitive-headers: Cookie,Set-Cookie,Authorization
+      path: /test_service/**
+      stripPrefix: true
+      serviceId: product-demo
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    registry-fetch-interval-seconds: 30
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8766/eureka/

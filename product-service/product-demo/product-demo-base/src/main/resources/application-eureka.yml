@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      version: ${spring.gray.deploy.version:}
+  client:
+    registerWithEureka: true
+    registry-fetch-interval-seconds: 3
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8766/eureka/
+    healthcheck:
+      enabled: true
+
+
+logging:
+  level:
+   org.springframework.web.servlet.DispatcherServlet: DEBUG

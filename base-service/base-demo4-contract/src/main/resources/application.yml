@@ -1,0 +1,5 @@
+# demo配置服务名
+demo4:
+  service:
+    serviceName: BASE-SERVICE-DEMO4
+

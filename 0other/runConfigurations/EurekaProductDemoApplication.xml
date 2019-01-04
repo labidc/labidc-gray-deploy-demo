@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaProductDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="eureka">
+    <module name="product-demo-eureka" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.product.web.EurekaProductDemoApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
