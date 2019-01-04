@@ -10,7 +10,7 @@ spring:
       port: 8500
       discovery:
         healthCheckInterval: 15s
-        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        instanceId: ${spring.application.name}:${server.port}
         tags:
           - 网关路由
         instance-group: 工具
