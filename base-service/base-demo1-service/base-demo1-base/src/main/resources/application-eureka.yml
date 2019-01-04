@@ -2,7 +2,7 @@ eureka:
   instance:
     prefer-ip-address: true
     metadata-map:
-      version: ${spring.gray.deploy.version}
+      version: ${spring.gray.deploy.version:}
   client:
     registerWithEureka: true
     registry-fetch-interval-seconds: 30

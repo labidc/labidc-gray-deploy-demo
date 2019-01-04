@@ -13,7 +13,7 @@ spring:
         tags:
           - DEMO1服务
           - 基础层服务
-          - version=${spring.gray.deploy.version}
+          - version=${spring.gray.deploy.version:}
         instance-group: 测试环境
         management-tags: 管理Tag
         query-passing: true

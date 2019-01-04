@@ -13,7 +13,7 @@ spring:
         tags:
           - WEB-DEMO服务
           - 产品层服务
-          - version=${spring.gray.deploy.version}
+          - version=${spring.gray.deploy.version:}
         default-query-tag: 业务逻辑层服务
         instance-group: 产品层服务
         management-tags: WEB-DEMO服务
