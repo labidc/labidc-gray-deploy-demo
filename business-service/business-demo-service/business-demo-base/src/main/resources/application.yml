@@ -15,8 +15,8 @@ endpoints:
 
 spring:
   #gray:
-    #deploy:
-      #ribbonRule: BestAvailableGrayDeployRule
+  #  deploy:
+  #    ribbonRule: RANDOM
   application:
     name: business-demo-service
   sleuth:
