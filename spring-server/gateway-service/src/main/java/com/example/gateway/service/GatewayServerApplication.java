@@ -25,7 +25,7 @@ public class GatewayServerApplication {
     public RouteLocator routeLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.host("**.woaini.com**")
-                        .uri("lb://service-web-demo"))
+                        .uri("lb://product-demo"))
                 .build();
     }
 

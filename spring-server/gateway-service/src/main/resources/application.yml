@@ -35,7 +35,7 @@ spring:
           #lower-case-service-id: true
       routes:
       - id: gray_demo
-        uri: lb://product-service-demo3
+        uri: lb://product-demo
         predicates:
         - Path=/test_service/**
         #- Header=version, (.*?)
