@@ -1,11 +1,11 @@
 # demo配置服务名
 demo1:
   service:
-    serviceName: BASE-DEMO1-SERVICE
+    serviceName: base-demo1-service
 
 demo4:
   service:
-    serviceName: BASE-DEMO4-SERVICE
+    serviceName: base-demo4-service
 
 
 endpoints:
