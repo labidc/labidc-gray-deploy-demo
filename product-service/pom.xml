@@ -18,12 +18,4 @@
 
 
 
-    <dependencies>
-        <!--小辣椒工具-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>

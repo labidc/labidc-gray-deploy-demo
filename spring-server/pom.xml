@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-server</artifactId>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>eureka-server</module>
+        <module>gateway-service</module>
+        <module>zuul2-server</module>
+    </modules>
 
 </project>
