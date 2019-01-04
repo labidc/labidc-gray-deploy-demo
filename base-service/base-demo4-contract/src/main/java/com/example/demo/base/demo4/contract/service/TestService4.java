@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.validation.constraints.NotNull;
-
 /**
  * @program: service1
  * @description: 测试服务
@@ -28,6 +26,6 @@ public interface TestService4 {
      */
     @ApiOperation("测试请求")
     @PostMapping(value = "/create")
-    public String createToken(@RequestBody @NotNull TestDemo4Model model);
+    String createToken(@RequestBody TestDemo4Model model);
 
 }
