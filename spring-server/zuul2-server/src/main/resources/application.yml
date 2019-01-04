@@ -29,7 +29,7 @@ zuul:
       sensitive-headers: Cookie,Set-Cookie,Authorization
       path: /gray_service/**
       stripPrefix: true
-      serviceId: product-service-demo3
+      serviceId: product-demo
 
 
 
