@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 @EnableFeignClients(basePackages = {"com.example.demo.base.demo4.contract.feign"})
-@ConditionalOnMissingClass(value = "com.example.demo.base.demo4.service.ServiceDemo4Application")
+@ConditionalOnMissingClass(value = {
+        "com.example.demo.base.demo4.service.ConsulBaseDemo4Application",
+        "com.example.demo.base.demo4.service.EurekaBaseDemo4Application"
+})
 public class Demo4AutoConfiguration {
 }

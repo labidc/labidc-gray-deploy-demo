@@ -6,11 +6,7 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @SpringBootApplication
 @RestController
@@ -37,12 +33,12 @@ public class GatewayServerApplication {
      * 全局熔断器
      * @return
      */
-    @RequestMapping(value = "/fallback")
+   /* @RequestMapping(value = "/fallback")
     public Map<String, String> fallBack() {
         Map<String, String> res = new HashMap();
         res.put("code", "-100");
         res.put("data", "service not available");
         return res;
-    }
+    }*/
 
 }

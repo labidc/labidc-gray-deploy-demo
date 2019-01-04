@@ -44,7 +44,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
 
 
         <!--包括了bus总线, 配置中心, 服务发现，该包依赖了consul-api开源包-->
