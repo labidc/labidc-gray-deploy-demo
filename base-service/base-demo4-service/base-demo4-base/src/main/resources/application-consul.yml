@@ -11,7 +11,7 @@ spring:
         instanceId: ${spring.application.name}:${server.port}
         # prefer-agent-address: false
         tags:
-          - DEMO1服务
+          - DEMO4服务
           - 基础层服务
           - version=${spring.gray.deploy.version:}
         instance-group: 测试环境
