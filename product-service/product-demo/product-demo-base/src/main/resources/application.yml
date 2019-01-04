@@ -38,7 +38,22 @@ gray:
   title: 产品层服务灰度版本
 
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000
 
+ribbon:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
+  ServerListRefreshInterval: 5000
 
 
 

@@ -45,7 +45,22 @@ logging:
 
 
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000
 
+ribbon:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
+  ServerListRefreshInterval: 5000
 
 # bootstrap 默认加载完成之后会去加载application，再去根据spring.profiles.active 去加载指定配置文件
 # 可以org.springframework.boot.env.EnvironmentPostProcessor=\
