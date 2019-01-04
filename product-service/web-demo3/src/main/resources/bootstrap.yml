@@ -9,7 +9,7 @@ server:
 spring:
   gray:
     deploy:
-      ribbonRule: RandomGrayDeployRule
+      ribbonRule: RANDOM
   profiles:
     active: eureka
   application:

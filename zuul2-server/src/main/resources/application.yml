@@ -4,7 +4,7 @@ server:
 spring:
   gray:
     deploy:
-      ribbonRule: RandomGrayDeployRule
+      ribbonRule: RANDOM
   application:
     name: zuul-server
   sleuth:

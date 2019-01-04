@@ -29,7 +29,6 @@
         <dependency>
              <groupId>com.labidc</groupId>
              <artifactId>labidc-gray-deploy-eureka</artifactId>
-             <version>1.0.4</version>
         </dependency>
 
      </dependencies>

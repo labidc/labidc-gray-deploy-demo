@@ -55,7 +55,6 @@
        <dependency>
             <groupId>com.labidc</groupId>
             <artifactId>labidc-gray-deploy-gateway</artifactId>
-            <version>1.0.4</version>
         </dependency>
 
     </dependencies>

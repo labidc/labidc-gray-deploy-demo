@@ -54,6 +54,8 @@
         <guava.version>27.0-jre</guava.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-collections4.version>4.2</commons-collections4.version>
+
+        <labidc-gray-deploy.version>1.0.5-SNAPSHOT</labidc-gray-deploy.version>
     </properties>
 
     <dependencyManagement>
@@ -164,6 +166,34 @@
                 <version>${commons-collections4.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-core</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-consul</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-eureka</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-core-servlet</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-gateway</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
