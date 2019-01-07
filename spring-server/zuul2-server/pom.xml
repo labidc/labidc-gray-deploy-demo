@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.labidc.demo</groupId>
-        <artifactId>servicedemo</artifactId>
+        <artifactId>spring-server</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>zuul2-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>zuul2-server</name>
     <description>Demo project for Spring Boot</description>
 
