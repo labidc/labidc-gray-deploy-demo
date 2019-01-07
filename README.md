@@ -13,7 +13,7 @@
 
 ## 一、如果基于 consul 和 gateway
 > 如果使用idea  
-> 可将 0other\runConfigurations 目录下配置 复制到 .idea/runConfigurations 目录下
+> 可将 0other\runConfigurations 目录下配置 复制到 .idea/runConfigurations 目录下  
 > 里面有已经配置好的 正式和灰度的启动配置 可选择启动
 
 ### 配置文件：每个服务里面已经有配置 application-consul.yml（可以自己修改配置中心）, application-eureka.yml （可以自己添加配置中心）
