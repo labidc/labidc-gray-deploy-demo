@@ -38,8 +38,8 @@ spring:
 
 
 gray:
-  #title: 业务层服务正式版本
-  title: 业务层服务灰度版本
+  title: 业务层服务正式版本
+  #title: 业务层服务灰度版本
 logging:
   level:
    org.springframework.web.servlet.DispatcherServlet: DEBUG

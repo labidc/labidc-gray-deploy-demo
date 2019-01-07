@@ -37,8 +37,8 @@ rabbitmq:
 
 
 gray:
-  #title: 产品层服务正式版本
-  title: 产品层服务灰度版本
+  title: 产品层服务正式版本
+  #title: 产品层服务灰度版本
 
 
 hystrix:

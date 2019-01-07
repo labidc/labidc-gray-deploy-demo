@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ConsulBaseDemo4Application-gray-2.0.0-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="consul">
+    <module name="base-demo4-consul" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.base.demo4.service.ConsulBaseDemo4Application" />
+    <option name="VM_PARAMETERS" value="-Dserver.port=32022 -Dspring.gray.deploy.version=2.0.0 -Dgray.title=基础服务4灰度版本2.0.0-2" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
