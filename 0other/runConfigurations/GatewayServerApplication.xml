@@ -3,6 +3,7 @@
     <module name="gateway-service" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gateway.service.GatewayServerApplication" />
     <option name="URL_PATH" value="/test_service/woaini/test" />
+    <option name="VM_PARAMETERS" value="-client   -Xms64m -Xmx128m -XX:NewSize=32m " />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />

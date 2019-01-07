@@ -2,7 +2,7 @@
   <configuration default="false" name="ConsulBusinessDemoApplication-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="consul">
     <module name="business-demo-consul" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.business.demo2.service.ConsulBusinessDemoApplication" />
-    <option name="VM_PARAMETERS" value="-Dserver.port=21002  -Dgray.title=业务层服务正式版本2" />
+    <option name="VM_PARAMETERS" value="-client   -Xms64m -Xmx128m -XX:NewSize=32m -Dserver.port=21002  -Dgray.title=业务层服务正式版本2" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />

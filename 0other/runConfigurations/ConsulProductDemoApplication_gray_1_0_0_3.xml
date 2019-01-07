@@ -2,7 +2,7 @@
   <configuration default="false" name="ConsulProductDemoApplication-gray-1.0.0-3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="consul">
     <module name="product-demo-consul" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.product.web.ConsulProductDemoApplication" />
-    <option name="VM_PARAMETERS" value="-Dserver.port=11013  -Dspring.gray.deploy.version=1.0.0   -Dgray.title=产品层服务灰度版本1.0.0-3" />
+    <option name="VM_PARAMETERS" value="-client   -Xms64m -Xmx128m -XX:NewSize=32m -Dserver.port=11013  -Dspring.gray.deploy.version=1.0.0   -Dgray.title=产品层服务灰度版本1.0.0-3" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />
