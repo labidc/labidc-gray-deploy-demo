@@ -1,3 +1,4 @@
+## [灰度发布插件地址：https://github.com/labidc/labidc-gray-deploy](https://github.com/labidc/labidc-gray-deploy).
 
 # labidc-gray-deploy-demo 灰度发布demo
 # 基于 labidc-gray-deploy 插件的demo 工程 
@@ -31,4 +32,3 @@
 ### 4.启动product-service 的产品层服务
 ### 5.启动zuul2-server 网关
 
-## [灰度发布插件地址：https://github.com/labidc/labidc-gray-deploy](https://github.com/labidc/labidc-gray-deploy).
