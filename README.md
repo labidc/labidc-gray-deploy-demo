@@ -29,6 +29,9 @@
 
 
 ## 二、如果基于 eureka 和 zuul2
+> 如果使用idea  
+> 可将 0other\runConfigurations 目录下配置 复制到 .idea/runConfigurations 目录下  
+> 里面有已经配置好的 正式和灰度的启动配置 可选择启动
 ### 每个服务里面已经有配置 application-consul.yml（可以自己修改配置中心）, application-eureka.yml （可以自己添加配置中心）
 ### 请在bootstrap.yml里或者自己创建 application.yml 并设置spring.profiles.active=consul或eureka
 ### bootstrap.yml 是公共公用配置
