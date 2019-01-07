@@ -39,6 +39,11 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.labidc</groupId>
+            <artifactId>labidc-gray-deploy-zipkin</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-core</artifactId>
         </dependency>

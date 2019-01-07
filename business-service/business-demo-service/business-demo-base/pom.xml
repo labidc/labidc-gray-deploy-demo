@@ -57,6 +57,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.labidc</groupId>
+            <artifactId>labidc-gray-deploy-zipkin</artifactId>
+        </dependency>
 
 
 

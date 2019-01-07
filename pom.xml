@@ -53,7 +53,7 @@
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-collections4.version>4.2</commons-collections4.version>
 
-        <labidc-gray-deploy.version>1.0.6-SNAPSHOT</labidc-gray-deploy.version>
+        <labidc-gray-deploy.version>1.0.6</labidc-gray-deploy.version>
     </properties>
 
     <dependencyManagement>
@@ -190,6 +190,11 @@
             <dependency>
                 <groupId>com.labidc</groupId>
                 <artifactId>labidc-gray-deploy-gateway</artifactId>
+                <version>${labidc-gray-deploy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.labidc</groupId>
+                <artifactId>labidc-gray-deploy-zipkin</artifactId>
                 <version>${labidc-gray-deploy.version}</version>
             </dependency>
 
