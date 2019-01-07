@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaBusinessDemoApplication-gray-2.0.0-3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="eureka">
+    <module name="business-demo-eureka" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.business.demo2.service.EurekaBusinessDemoApplication" />
+    <option name="VM_PARAMETERS" value="-client   -Xms64m -Xmx128m -XX:NewSize=32m -Dserver.port=21023  -Dspring.gray.deploy.version=2.0.0 -Dgray.title=业务层服务灰度版本2.0.0-3" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaBaseDemo4Application-gray-1.0.0-3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="eureka">
+    <module name="base-demo4-eureka" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.base.demo4.service.EurekaBaseDemo4Application" />
+    <option name="VM_PARAMETERS" value="-client   -Xms64m -Xmx128m -XX:NewSize=32m -Dserver.port=32013 -Dspring.gray.deploy.version=1.0.0 -Dgray.title=基础服务4灰度版本1.0.0-3" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
