@@ -16,9 +16,12 @@ server:
   port: ${port:21000}
 
 spring:
-  #gray:
-  #  deploy:
-  #    ribbonRule: RANDOM
+  gray:
+    deploy:
+      #ribbonRule: RANDOM
+      transmit:
+        headers:
+        - xxx
   application:
     name: business-demo-service
   sleuth:

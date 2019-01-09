@@ -10,7 +10,12 @@ server:
 spring:
   gray:
     deploy:
-      ribbonRule: RANDOM
+      #ribbonRule: RANDOM
+      transmit:
+        headers:
+        - xxx
+
+
   application:
     name: product-demo
   sleuth:
