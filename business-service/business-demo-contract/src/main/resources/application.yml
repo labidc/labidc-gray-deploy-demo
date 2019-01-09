@@ -1,5 +1,5 @@
 # demo配置服务名
 demo2:
   service:
-    serviceName: BUSINESS-SERVICE-DEMO2
+    serviceName: business-demo-service
 
