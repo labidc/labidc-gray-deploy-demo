@@ -78,10 +78,10 @@
         </dependency>-->
 
         <!--consul 灰度发布包-->
-        <dependency>
+    <!--    <dependency>
             <groupId>com.labidc</groupId>
             <artifactId>labidc-gray-deploy-consul</artifactId>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 
