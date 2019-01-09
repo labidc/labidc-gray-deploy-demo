@@ -33,6 +33,13 @@ public class TestServiceImpl implements TestService {
         if(!StringUtils.isEmpty(xxx)){
             System.out.println("获取到header xxx:"+xxx);
         }
+
+        String xxx2 = request.getHeader("xxx2");
+        if(!StringUtils.isEmpty(xxx2)){
+            System.out.println("获取到header xxx2:"+xxx2);
+        }
+
+
         return model.getTestText() + " 》》" + grayTitle;
     }
 }

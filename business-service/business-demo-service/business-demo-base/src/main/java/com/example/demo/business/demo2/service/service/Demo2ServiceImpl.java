@@ -52,6 +52,7 @@ public class Demo2ServiceImpl implements Demo2Service {
         if(!StringUtils.isEmpty(xxx)){
             System.out.println("获取到header xxx:"+xxx);
         }
+        request.setAttribute("xxx2","xxxxx");
 
         TestDemoModel testDemoModel = new TestDemoModel();
         testDemoModel.setTestText(model.getDemo2Name() + " 》》" + grayTitle);

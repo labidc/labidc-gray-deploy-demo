@@ -22,6 +22,8 @@ spring:
       transmit:
         headers:
         - xxx
+        attributes:
+        - xxx2
   application:
     name: business-demo-service
   sleuth:
