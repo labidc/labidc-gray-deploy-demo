@@ -62,6 +62,7 @@ ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 20000
   ServerListRefreshInterval: 5000
+  NFLoadBalancerPingInterval: 1
 
 
 
