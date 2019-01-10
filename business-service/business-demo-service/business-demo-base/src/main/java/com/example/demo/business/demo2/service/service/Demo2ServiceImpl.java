@@ -1,7 +1,6 @@
 package com.example.demo.business.demo2.service.service;
 
 
-
 import com.example.demo.base.demo1.contract.feign.TestServiceImpl;
 import com.example.demo.base.demo1.contract.model.TestDemoModel;
 import com.example.demo.base.demo4.contract.feign.TestService4Impl;
@@ -12,9 +11,14 @@ import com.example.demo.business.demo2.contract.service.Demo2Service;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -41,6 +45,14 @@ public class Demo2ServiceImpl implements Demo2Service {
 
     @Override
     public String validate(@RequestBody Demo2Model model) {
+
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = requestAttributes.getRequest();
+        String xxx = request.getHeader("xxx");
+        if(!StringUtils.isEmpty(xxx)){
+            System.out.println("获取到header xxx:"+xxx);
+        }
+        request.setAttribute("xxx2","xxxxx");
 
         TestDemoModel testDemoModel = new TestDemoModel();
         testDemoModel.setTestText(model.getDemo2Name() + " 》》" + grayTitle);

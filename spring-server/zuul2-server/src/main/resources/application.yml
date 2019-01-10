@@ -1,5 +1,5 @@
 server:
-  port: ${port:8746}
+  port: ${port:8740}
 
 spring:
   gray:
@@ -31,7 +31,17 @@ zuul:
       stripPrefix: true
       serviceId: product-demo
 
-
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000
+ribbon:
+  ServerListRefreshInterval: 30000
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
 
 eureka:
   instance:

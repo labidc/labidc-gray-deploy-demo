@@ -10,7 +10,12 @@ server:
 spring:
   gray:
     deploy:
-      ribbonRule: RANDOM
+      #ribbonRule: RANDOM
+      transmit:
+        headers:
+        - xxx
+
+
   application:
     name: product-demo
   sleuth:
@@ -57,6 +62,7 @@ ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 20000
   ServerListRefreshInterval: 5000
+  NFLoadBalancerPingInterval: 1
 
 
 

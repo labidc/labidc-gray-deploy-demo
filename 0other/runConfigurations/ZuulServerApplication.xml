@@ -2,6 +2,7 @@
   <configuration default="false" name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="eureka">
     <module name="zuul2-server" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.zuul2.demo.ZuulServerApplication" />
+    <option name="URL_PATH" value="/test_service/woaini/test" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />

@@ -4,8 +4,13 @@ import com.example.demo.base.demo1.contract.model.TestDemoModel;
 import com.example.demo.base.demo1.contract.service.TestService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @program: service1
@@ -22,6 +27,19 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String createToken(@RequestBody TestDemoModel model) {
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = requestAttributes.getRequest();
+        String xxx = request.getHeader("xxx");
+        if(!StringUtils.isEmpty(xxx)){
+            System.out.println("获取到header xxx:"+xxx);
+        }
+
+        String xxx2 = request.getHeader("xxx2");
+        if(!StringUtils.isEmpty(xxx2)){
+            System.out.println("获取到header xxx2:"+xxx2);
+        }
+
+
         return model.getTestText() + " 》》" + grayTitle;
     }
 }

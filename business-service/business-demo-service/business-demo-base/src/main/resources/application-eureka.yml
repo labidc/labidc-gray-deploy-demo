@@ -2,11 +2,11 @@
 eureka:
   instance:
     prefer-ip-address: true
-    metadataMap:
+    metadata-map:
       version: ${spring.gray.deploy.version:}
   client:
     registerWithEureka: true
-    registry-fetch-interval-seconds: 30
+    registry-fetch-interval-seconds: 3
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8766/eureka/
