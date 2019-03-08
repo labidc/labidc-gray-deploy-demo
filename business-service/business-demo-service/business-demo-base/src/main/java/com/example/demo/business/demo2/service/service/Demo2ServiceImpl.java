@@ -56,10 +56,10 @@ public class Demo2ServiceImpl implements Demo2Service {
 
         TestDemoModel testDemoModel = new TestDemoModel();
         testDemoModel.setTestText(model.getDemo2Name() + " 》》" + grayTitle);
-        testService.createToken(testDemoModel);
+        String token = testService.createToken(testDemoModel);
 
         TestDemo4Model testDemo4Model = new TestDemo4Model();
-        testDemo4Model.setTestText(model.getDemo2Name() + " 》》" + grayTitle);
+        testDemo4Model.setTestText(token + " 《《" + grayTitle);
 
         return test4Service.createToken(testDemo4Model);
     }
