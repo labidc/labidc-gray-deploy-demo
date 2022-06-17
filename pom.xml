@@ -37,7 +37,7 @@
 
         <!--第三方库版本号-->
         <lombok.version>1.16.18</lombok.version>
-        <alibaba.fastjson.version>1.2.47</alibaba.fastjson.version>
+        <alibaba.fastjson.version>1.2.83</alibaba.fastjson.version>
         <aliyun.sdk.core.version>2.2.0</aliyun.sdk.core.version>
         <hibernate.validator>6.0.9.Final</hibernate.validator>
         <xstream.version>[1.4.11,)</xstream.version>
